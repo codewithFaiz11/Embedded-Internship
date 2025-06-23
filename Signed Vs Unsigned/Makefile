@@ -2,9 +2,9 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -pedantic -std=c99
 
-SRCS = task3.c
+SRCS = main.c
 OBJS = $(SRCS:.c=.o)
-TARGET = task3
+TARGET = main
 
 .PHONY: all clean
 

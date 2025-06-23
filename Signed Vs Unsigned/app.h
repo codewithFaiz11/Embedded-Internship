@@ -4,7 +4,7 @@
 
 
 typedef struct stData{
-    int svar:9;
+    signed int svar:9;
     unsigned int uvar:9;
 } stData;
 

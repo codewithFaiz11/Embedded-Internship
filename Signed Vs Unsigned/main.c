@@ -12,13 +12,13 @@ int main() {
     data.svar = a;
     data.uvar = a;
     printf("svar stores the number %d whereas uvar can't, it overflows & stores %d\n\n", data.svar, data.uvar); 
-    
+                                                                               //Unsigned Stores value 512 + a
     printf("2. Storing Number Greater Than 255\n");
     a = (rand() % 255) + 256; // Storing Value in Range 256 to 511
     data.svar = a;
     data.uvar = a;
     printf("uvar stores the number %d whereas svar can't, it overflows & stores %d\n\n", data.uvar, data.svar);  
-
+                                                                             //Signed Stores value a - 512
     printf("3. Storing Number in range 0 - 255\n");
     a = rand() % 256; //Storing Value in Range 0 - 255
     data.svar = a;

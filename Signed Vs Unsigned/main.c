@@ -8,18 +8,21 @@ int main() {
     stData data;
     
     printf("1. Storing Negative Number\n");
-    data.svar = (rand() % 256) - 256;
-    data.uvar = (rand() % 256) - 256;
+    int a = (rand() % 256) - 256; //Storing Value in Range -256 to 0
+    data.svar = a;
+    data.uvar = a;
     printf("svar stores the number %d whereas uvar can't, it overflows & stores %d\n\n", data.svar, data.uvar); 
     
     printf("2. Storing Number Greater Than 255\n");
-    data.svar = (rand() % 257) + 255;
-    data.uvar = (rand() % 257) + 255;
+    a = (rand() % 255) + 256; // Storing Value in Range 256 to 511
+    data.svar = a;
+    data.uvar = a;
     printf("uvar stores the number %d whereas svar can't, it overflows & stores %d\n\n", data.uvar, data.svar);  
 
     printf("3. Storing Number in range 0 - 255\n");
-    data.svar = rand() % 256;
-    data.uvar = rand() % 256;
+    a = rand() % 256; //Storing Value in Range 0 - 255
+    data.svar = a;
+    data.uvar = a;
     printf("Both svar and uvar can store the value %d", data.uvar); 
 
     // CONCLUSION:

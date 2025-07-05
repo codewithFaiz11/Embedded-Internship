@@ -1,0 +1,34 @@
+When we will runn this code this will shows this error,
+
+  ERROR: /usr/bin/ld: /tmp/cc4FprcN.o: warning: relocation against `pi' in read-only section `.text'
+  /usr/bin/ld: /tmp/cc4FprcN.o: in function `main':
+  main.c:(.text+0xc): undefined reference to `pi'
+  /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+  collect2: error: ld returned 1 exit status
+
+It happens because the variable `pi` is defined in `math.c` but not declared as `extern` in `main.c`.
+The linker cannot find the definition of `pi` when linking the object files, leading to an "undefined reference" error.
+
+But When i make it non static in `math.c` and declare it as `extern` in `main.c`, the code will compile and link successfully.
+because the `extern` keyword tells the compiler that the variable `pi` is defined in another file, allowing the linker to resolve its address correctly.
+
+
+If i make it non static and changes main.c code like this:
+  
+  In Main.c
+  #include <stdio.h>
+
+  extern float pi; 
+  void function();  
+  
+  int main()
+  {
+      function();  // Call the function defined in math.c
+      printf("Trying to access pi from main.c: %.2f\n", pi);
+      return 0;
+  }
+
+It will compile and link successfully because the `extern` keyword in `main.c` tells the compiler that `pi` is defined in another file (in this case, `math.c`).
+The result will be:
+  Value of pi inside math.c: 3.14
+  Trying to access pi from main.c: 3.14  

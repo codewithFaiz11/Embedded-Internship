@@ -1,4 +1,4 @@
-When we will runn this code this will shows this error,
+When we will run this code this will shows this error,
 
   ERROR: /usr/bin/ld: /tmp/cc4FprcN.o: warning: relocation against `pi' in read-only section `.text'
   /usr/bin/ld: /tmp/cc4FprcN.o: in function `main':

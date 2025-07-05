@@ -14,4 +14,4 @@ int main()
 
 //So Basically I called the fuction and not the value to be assigned in it
 //It will be useful ascessing static global variable in another file but this costs creating external function
-//However, There are certain ways to do so without doing so, like using pointers as discussed in class.
+//However, There are certain ways to do so without doing this, like using pointers as discussed in class.

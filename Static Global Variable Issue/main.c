@@ -1,10 +1,13 @@
 #include <stdio.h>
+#include <stdint.h>
 
-extern float pi; 
-  
+int function(); //Call to function prototype
+uint32_t nVar2;
+
 
 int main()
 {
-    printf("Trying to access pi from main.c: %.2f\n", pi);
+    nVar2 = function(); // Call to function value to nVar2
+    printf("nVar2 = %u\n", nVar2);
     return 0;
 }

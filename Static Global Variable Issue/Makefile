@@ -2,9 +2,9 @@ CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -std=c99
 
 
-SRCS = main.c math.c  
+SRCS = main.c app.c  
 OBJS = $(SRCS:.c=.o)
-TARGET = program
+TARGET = exe
 
 all: $(TARGET)
 

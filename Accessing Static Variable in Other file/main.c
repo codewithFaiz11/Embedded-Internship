@@ -11,3 +11,5 @@ int main()
     printf("nVar2 = %u\n", nVar2);
     return 0;
 }
+
+//So Basically I called the fuction and not the value to be assigned in it

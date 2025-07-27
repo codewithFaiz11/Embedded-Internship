@@ -2,6 +2,10 @@
 #include <pthread.h>
 #include <unistd.h>
 
+// This program creates two threads to print numbers from 0 to 49 in sequential order.
+// One thread is responsible for printing even numbers, and the other for odd numbers,
+// using a mutex and condition variables for synchronization.
+
 int counter = 0;
 
 pthread_mutex_t mutex;
